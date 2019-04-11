@@ -4,7 +4,7 @@ const ajaxRequest = (data, method, action) => {
         const xhr = new XMLHttpRequest();
         xhr.open(`${method}`, `${action}`);
         xhr.onload = () => { resolve(xhr.responseText); };
-        xhr.onerror = () => { reject(xhr.responseText); };
+        xhr.onerror = () => { reject(new Error(xhr.responseText)); };
         xhr.setRequestHeader("Content-type", "application/json");
         xhr.send(data);
     });
