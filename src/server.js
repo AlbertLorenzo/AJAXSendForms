@@ -1,6 +1,7 @@
 // Requests
 const path = require('path');
 const methodOverride = require('method-override');
+const morgan = require('morgan');
 const express = require('express');
 
 // Inicializaciones
@@ -13,6 +14,7 @@ app.engine('html', require('ejs').renderFile);
 app.set('views', path.join(__dirname, 'views'));
 
 // Middlewares
+app.use(morgan('dev'));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(methodOverride('_method'));
