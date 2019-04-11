@@ -7,10 +7,10 @@ const ajaxRequest = (data, method, action) => {
     xhr.send(data);
 }
 
-const serializeForm = (formData) => {
+const serializeForm = (form) => {
     const dataObject = {};
-    const formObject = new FormData(formData);
-    formObject.forEach((value, index) => { dataObject[index] = value });
+    const formData = new FormData(form);
+    formData.forEach((value, index) => { dataObject[index] = value });
     return JSON.stringify(dataObject);
 }
 
