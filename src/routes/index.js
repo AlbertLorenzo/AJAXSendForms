@@ -5,7 +5,15 @@ router.get('/', (req, res, next) => {
 });
 
 router.post('/', (req, res, next) => {
-    res.send(req.body);
+    res.json(req.body);
+});
+
+router.put('/', (req, res, next) => {
+    res.send('put');
+});
+
+router.delete('/', (req, res, next) => {
+    res.send('delete');
 });
 
 module.exports = router;
