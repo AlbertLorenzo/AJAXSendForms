@@ -8,10 +8,10 @@ const ajaxRequest = (data, method, action) => {
 }
 
 const serializeForm = (form) => {
-    const dataObject = {};
+    const jsonObject = {};
     const formData = new FormData(form);
-    formData.forEach((value, index) => { dataObject[index] = value });
-    return JSON.stringify(dataObject);
+    formData.forEach((value, index) => { jsonObject[index] = value });
+    return JSON.stringify(jsonObject);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
