@@ -1,4 +1,4 @@
-// Ésta función podría manejar todas las peticiones AJAX según el método, aunque por ahora sólo funciona con GET/POST.
+// La idea es que ésta función maneje todas las peticiones AJAX
 const ajaxRequest = (data, method, action) => {
     return new Promise((resolve, reject) => {
         const xhr = new XMLHttpRequest();

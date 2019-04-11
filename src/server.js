@@ -8,8 +8,8 @@ const app = express();
 
 // Settings
 app.set('port', process.env.PORT || 288);
-app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
+app.engine('html', require('ejs').renderFile);
 app.set('views', path.join(__dirname, 'views'));
 
 // Middlewares
