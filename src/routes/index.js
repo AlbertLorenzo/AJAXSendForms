@@ -5,11 +5,11 @@ router.get('/', (req, res, next) => {
 });
 
 router.post('/', (req, res, next) => {
-    res.json(req.body);
+    res.send(req.body);
 });
 
 router.put('/', (req, res, next) => {
-    res.send('put');
+    res.send('update');
 });
 
 router.delete('/', (req, res, next) => {

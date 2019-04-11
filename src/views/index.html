@@ -10,9 +10,17 @@
 
 <body>
     <p id="texto">Texto AJAX</p>
-    <form action="/" method="POST" id="form" class="form">
+    <form action="/" method="POST" class="form">
         <input type="text" placeholder="Cambia el texto" name="text">
-        <input type="submit" value="enviar" name="submit" id="submitForm">
+        <input type="submit" value="enviar" name="submit" id="submitPostForm">
+    </form>
+    <form method="POST" action="/?_method=DELETE" class="form">
+        <input type="text" placeholder="Elimina" name="text">
+        <input type="submit" value="delete" name="submit" id="submitDeleteForm">
+    </form>
+    <form method="POST" action="/?_method=PUT" class="form">
+        <input type="text" placeholder="Actualizar" name="text">
+        <input type="submit" value="put" name="submit" id="submitPutForm">
     </form>
     <script src="js/ajax.js"></script>
 </body>
