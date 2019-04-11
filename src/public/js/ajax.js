@@ -25,7 +25,7 @@ const handlePromise = (promise) => {
     });
 }
 
-const handleAsyncFunction = async (Fnt) => {
+const handleAsyncFunction = async (fnt) => {
     const response = await fnt;
     console.log(response);
 }
