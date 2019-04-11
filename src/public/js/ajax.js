@@ -25,7 +25,7 @@ const handlePromise = (promise) => {
     });
 }
 
-const handleAjaxAsyncFunction = async (Fnt) => {
+const handleAsyncFunction = async (Fnt) => {
     const response = await fnt;
     console.log(response);
 }
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
         form.addEventListener('submit', (event) => {
             const serializedForm = serializeForm(form);
             event.preventDefault();
-            handleAjaxAsyncFunction(ajaxRequest(serializedForm, form.getAttribute('method'), form.getAttribute('action')));
+            handleAsyncFunction(ajaxRequest(serializedForm, form.getAttribute('method'), form.getAttribute('action')));
         });
     });
 });
